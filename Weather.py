@@ -23,15 +23,20 @@ try:
 
     #splits capital letter so i can make a new line
     y = re.findall('[A-Z][^A-Z]*',info)
-
+    spacing = y[2][11:]
 
 
     #print all the values
     print('************************************************************')
     print(time)
     print('The Temperature is {} °F'.format(temp))
-    for i in y:
+    for i in y[0:2]:
         print('- {}'.format(i))
+    print('- {} {}'.format(y[2][:11],spacing))
+
+
+
+
     print('************************************************************')
 
 except AttributeError:
